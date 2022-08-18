@@ -1,0 +1,10 @@
+.location {
+    background-color: #c1c1c17a;
+    font-weight: bold;
+
+    @include flex( null, 'center');
+
+    &>p {
+        margin-left: $half-margin;
+    }
+}
