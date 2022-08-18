@@ -1,6 +1,7 @@
 .location {
     background-color: #c1c1c17a;
     font-weight: bold;
+    padding: 0;
 
     @include flex( null, 'center');
 
@@ -11,36 +12,35 @@
 
 .presentation {
     @include flex('column', 'center');
-    padding: $half-margin $half-margin $margin;
     background-color: $font-quaternary;
 
     h1 {
-        margin: $margin $margin 0;
+        width: 70%;
+        font-size: 1.5em;
+        margin: 0;
         text-align: center;
     }
 
     p {
-        font-size: 1.2em;
+        font-size: 1.1em;
+        font-weight: 300;
         text-align: center;
-        color: gray; 
-    }
-
-    button {
         margin: $half-margin 0 $margin;
+        color: gray; 
     }
 }
 
 .working {
-    padding: $half-margin $half-margin $half-margin $margin;
+    padding-left: $margin;
 
     h1 {
         font-size: 1.6em;
-        margin: $margin 0;
+        margin: 0 0 $margin;
     }
 
     &__step {
         font-weight: bold;
-        padding: $tree-quarter-margin;
+        padding: $margin;
         position: relative;
         margin-bottom: $margin;
 
