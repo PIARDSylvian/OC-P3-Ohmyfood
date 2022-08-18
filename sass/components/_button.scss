@@ -1,6 +1,7 @@
 button {
     background: linear-gradient($font-secondary, $font-primary);
-    padding: $half-margin $tree-quarter-margin;
+    margin: $quarter-margin 0;
+    padding: calc($half-margin + 4px);
     border: 0;
     border-radius: $margin;
     font-weight: bold;
