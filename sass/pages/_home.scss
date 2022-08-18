@@ -8,3 +8,24 @@
         margin-left: $half-margin;
     }
 }
+
+.presentation {
+    @include flex('column', 'center');
+    padding: $half-margin $half-margin $margin;
+    background-color: $font-quaternary;
+
+    h1 {
+        margin: $margin $margin 0;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.2em;
+        text-align: center;
+        color: gray; 
+    }
+
+    button {
+        margin: $half-margin 0 $margin;
+    }
+}
