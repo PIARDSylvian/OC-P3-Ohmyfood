@@ -4,3 +4,9 @@
     align-items: #{$align-item};
     justify-content: #{$justify-content};
 }
+
+@mixin menu() {
+    border-radius: $tree-quarter-margin;
+    background-color: $font-quaternary;
+    box-shadow: 0px 10px 10px 0px darken($font-quaternary, 10%);
+}
