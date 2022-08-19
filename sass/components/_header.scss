@@ -1,7 +1,7 @@
 .header {
-    box-shadow: 0px 2px 2px 0px rgb(72 72 72 / 30%);
-    padding: $tree-quarter-margin 0 $half-margin;
+    @include box-shadow($x : 0px, $y : 2px, $flou : 2px, $double : 0px);
     @include flex;
+    padding: $tree-quarter-margin 0 $half-margin;
 
     &__logo {
         width: 160px;
