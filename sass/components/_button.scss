@@ -1,6 +1,6 @@
 button {
-    background: linear-gradient($font-secondary, $font-primary);
-    padding: calc($half-margin);
+    background: linear-gradient(165deg, $font-secondary, $font-primary);
+    padding: calc($half-margin + 3px);
     border: 0;
     border-radius: $margin;
     font-weight: 400;
