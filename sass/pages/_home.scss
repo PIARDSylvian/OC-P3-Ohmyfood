@@ -29,6 +29,10 @@
         margin: $half-margin 0 $tree-quarter-margin;
         color: gray; 
     }
+
+    button {
+        margin-bottom: $quarter-margin;
+    }
 }
 
 .working {
