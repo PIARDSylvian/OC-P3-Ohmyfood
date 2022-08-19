@@ -1,9 +1,8 @@
 button {
     background: linear-gradient($font-secondary, $font-primary);
-    margin: $quarter-margin 0;
-    padding: calc($half-margin + 4px);
+    padding: calc($half-margin);
     border: 0;
     border-radius: $margin;
-    font-weight: bold;
+    font-weight: 400;
     color: white;
 }
