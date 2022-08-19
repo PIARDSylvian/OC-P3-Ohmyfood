@@ -1,0 +1,5 @@
+@mixin menu() {
+    border-radius: $tree-quarter-margin;
+    background-color: $font-quaternary;
+    @include box-shadow;
+}

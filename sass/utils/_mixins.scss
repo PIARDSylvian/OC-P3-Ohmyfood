@@ -8,9 +8,3 @@
 @mixin box-shadow($x : 0px, $y : 5px, $flou : 10px, $double : 0px) {
     box-shadow: $x $y $flou $double darken($font-quaternary, 40);
 }
-
-@mixin menu() {
-    border-radius: $tree-quarter-margin;
-    background-color: $font-quaternary;
-    @include box-shadow;
-}
