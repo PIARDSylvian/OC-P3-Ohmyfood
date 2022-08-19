@@ -91,10 +91,14 @@
         font-size: 1.5em;
         margin: 0 0 $margin;
     }
-
+    
     .restaurant {
-        background-color: white;
+        @include box-shadow(0px, 2px, 15px, 0px);
 
+        background-color: white;
+        border-radius: $half-margin;
+        overflow: hidden;
+        
         &__cover {
             object-fit: cover;
             object-position: 0 100%;
@@ -103,10 +107,25 @@
         }
 
         &__desc {
-            padding: $quarter-margin;
+            padding: $half-margin;
             @include flex(null, center, space-between);
+
             h1 {
                 font-size: 1.1em;
+                margin: 0;
+            }
+
+            p {
+                margin: 5px 0 0 0;
+            }
+
+            i {
+                font-size: 1.8em;
+
+                &:hover {
+                    font-weight: bold;
+                    color: $font-primary;
+                }
             }
         }
 
