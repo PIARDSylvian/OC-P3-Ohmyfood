@@ -1,5 +1,5 @@
 button {
-    @include box-shadow($x : 0px, $y : 5px, $flou : 10px, $double : 0px);
+    @include box-shadow;
     background: linear-gradient(165deg, $font-secondary, $font-primary);
     padding: calc($half-margin + 3px);
     border: 0;
