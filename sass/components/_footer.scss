@@ -1,0 +1,28 @@
+footer {
+    padding: $tree-quarter-margin $quarter-margin $half-margin;
+    background-color: #353535;
+    color: white;
+
+    h1 {
+        font-family: "Shrikhand";
+        font-weight: unset;
+        font-size: 1.2em;
+        margin: 0;
+        --webkit-filter: blur(0.000001px);
+    }
+
+    ul {
+        margin-top: $tree-quarter-margin;
+        list-style: none;
+        padding: 0;
+
+        li {
+            padding-bottom: $quarter-margin;
+
+            i {
+                font-size: .8em;
+                margin-right: $half-margin;
+            }   
+        }
+    }
+}
