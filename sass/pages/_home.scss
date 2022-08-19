@@ -16,7 +16,7 @@
     background-color: $font-quaternary;
 
     h1 {
-        width: 70%;
+        width: 80%;
         font-size: 1.5em;
         margin: 0;
         text-align: center;
@@ -26,8 +26,12 @@
         font-size: 1.1em;
         font-weight: 300;
         text-align: center;
-        margin: $half-margin 0 $margin;
+        margin: $half-margin 0 $tree-quarter-margin;
         color: gray; 
+    }
+
+    button {
+        margin-bottom: $quarter-margin;
     }
 }
 
