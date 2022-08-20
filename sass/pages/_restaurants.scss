@@ -39,3 +39,25 @@
         }
     }
 }
+
+.starter {
+    background-color: $font-quaternary;
+    padding-top: $quarter-margin;
+
+    h2 {
+        font-size: 1em;
+        text-transform: uppercase;
+        font-weight: 300;
+        position: relative;
+
+        &:after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -.4em;
+            width: 2.5em;
+            height: 1em;
+            border-bottom: solid 3px $font-ternary;
+        }
+    }
+}
