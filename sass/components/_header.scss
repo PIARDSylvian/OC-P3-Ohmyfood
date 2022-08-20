@@ -1,8 +1,8 @@
 .header {
-    @include box-shadow($x : 0px, $y : 2px, $flou : 2px, $double : 0px);
-    @include flex;
+    @include box-shadow($y : 2px, $flou : 4px, $color : darken($font-quaternary, 20));
+    @include flex($column : row, $align-item : center, $justify-content: center);
     padding: $tree-quarter-margin 0 $half-margin;
-
+ 
     &__logo {
         width: 160px;
     }
