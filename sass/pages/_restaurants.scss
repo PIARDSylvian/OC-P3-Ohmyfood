@@ -98,3 +98,12 @@
         }
     }
 }
+
+.restaurant-submit {
+    @include flex;
+    background-color: $font-quaternary;
+
+    button {
+        padding: calc($half-margin + 3px) 50px;
+    }
+}
