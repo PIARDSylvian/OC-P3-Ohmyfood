@@ -40,11 +40,11 @@
     }
 }
 
-.starter {
+.starter, .dishes, .desserts {
     background-color: $font-quaternary;
     padding-top: $quarter-margin;
 
-    h2 {
+    > h1 {
         font-size: 1em;
         text-transform: uppercase;
         font-weight: 300;
@@ -58,6 +58,28 @@
             width: 2.5em;
             height: 1em;
             border-bottom: solid 3px $font-ternary;
+        }
+    }
+
+    &__menu {
+        @include menu($half-margin, white);
+        @include flex($justify-content: space-between);
+        margin-top: $margin;
+        padding: $half-margin;
+
+        h1 {
+            margin: 0;
+            font-size: 1.1em;
+        }
+
+        p {
+            margin: 0.2em 0 0;
+        }
+
+        .menu__price {
+            font-weight: bold;
+            align-self: flex-end;
+            padding-right: $quarter-margin;
         }
     }
 }
