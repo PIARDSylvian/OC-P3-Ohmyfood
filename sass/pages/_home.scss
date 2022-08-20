@@ -91,6 +91,11 @@
         font-size: 1.5em;
         margin: 0 0 $margin;
     }
+
+    a {
+        text-decoration: none;
+        color: unset;
+    }
     
     .restaurant {
         @include box-shadow($y : 2px, $color : darken($font-quaternary, 20));
