@@ -64,19 +64,34 @@
     &__menu {
         @include menu($half-margin, white);
         @include flex($justify-content: space-between);
-        margin-top: $margin;
+        margin-top: calc($half-margin - 2px);
         padding: $half-margin;
+
+        &:first-of-type {
+            margin-top: $margin;
+        }
+
+        >div {
+            overflow: hidden;
+        }
 
         h1 {
             margin: 0;
             font-size: 1.1em;
         }
 
-        p {
-            margin: 0.2em 0 0;
+        p:not(.menu__price) {
+            margin: 0.1em 0 0;
+        }
+
+        h1, p:not(.menu__price) {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
 
         .menu__price {
+            margin: 0;
             font-weight: bold;
             align-self: flex-end;
             padding-right: $quarter-margin;
