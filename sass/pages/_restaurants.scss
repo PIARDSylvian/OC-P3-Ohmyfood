@@ -42,7 +42,7 @@
 
 .starter, .dishes, .desserts {
     background-color: $font-quaternary;
-    padding-top: $quarter-margin;
+    padding: $quarter-margin $half-margin $half-margin;
 
     > h1 {
         font-size: 1em;
