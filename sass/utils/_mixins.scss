@@ -5,6 +5,6 @@
     justify-content: #{$justify-content};
 }
 
-@mixin box-shadow($x : 0px, $y : 5px, $flou : 10px, $double : 0px) {
-    box-shadow: $x $y $flou $double darken($font-quaternary, 40);
+@mixin box-shadow($x : 0px, $y : 5px, $flou : 10px, $double : 0px, $color : $font-quaternary) {
+    box-shadow: $x $y $flou $double $color;
 }

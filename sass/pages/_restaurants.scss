@@ -1,0 +1,110 @@
+.header {
+    background-color: $font-quaternary;
+
+    a {
+        color: black;
+        position: absolute;
+        font-size: 1.3em;
+        left: $margin;
+    }
+
+    &--restaurant {
+        position: relative;
+    }
+
+    &__cover--restaurant {
+        width: 100%;
+        height: 18em;
+        object-fit: cover;
+    }
+    
+    &__content--restaurant {
+        padding: $half-margin $half-margin 0;
+        position: absolute;
+        width: 100%;
+        bottom: -5px;
+        background-color: $font-quaternary;
+        border-radius: $padding $padding 0 0;
+
+        @include flex($column : row, $align-item : center, $justify-content: space-around);
+        
+        h1 {
+            font-family: 'Shrikhand';
+            font-size: 1.6em;
+            letter-spacing: 0.04em;
+        }
+
+        i {
+            font-size: 1.6em;
+            color: gray;
+        }
+    }
+}
+
+.starter, .dishes, .desserts {
+    background-color: $font-quaternary;
+    padding: $quarter-margin $half-margin $half-margin;
+
+    > h1 {
+        font-size: 1em;
+        text-transform: uppercase;
+        font-weight: 300;
+        position: relative;
+
+        &:after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -.4em;
+            width: 2.5em;
+            height: 1em;
+            border-bottom: solid 3px $font-ternary;
+        }
+    }
+
+    &__menu {
+        @include menu($half-margin, white);
+        @include flex($justify-content: space-between);
+        margin-top: calc($half-margin - 2px);
+        padding: $half-margin;
+
+        &:first-of-type {
+            margin-top: $margin;
+        }
+
+        >div {
+            overflow: hidden;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.1em;
+        }
+
+        p:not(.menu__price) {
+            margin: 0.1em 0 0;
+        }
+
+        h1, p:not(.menu__price) {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .menu__price {
+            margin: 0;
+            font-weight: bold;
+            align-self: flex-end;
+            padding-right: $quarter-margin;
+        }
+    }
+}
+
+.restaurant-submit {
+    @include flex;
+    background-color: $font-quaternary;
+
+    button {
+        padding: calc($half-margin + 3px) 50px;
+    }
+}
