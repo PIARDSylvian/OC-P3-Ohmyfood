@@ -1,0 +1,39 @@
+.header {
+    i {
+        position: absolute;
+        font-size: 1.3em;
+        left: $margin;
+    }
+
+    &--restaurant {
+        position: relative;
+    }
+
+    &__cover--restaurant {
+        width: 100%;
+        height: 18em;
+        object-fit: cover;
+    }
+    
+    &__content--restaurant {
+        padding: $half-margin $half-margin 0;
+        position: absolute;
+        width: 100%;
+        bottom: -5px;
+        background-color: $font-quaternary;
+        border-radius: $padding $padding 0 0;
+
+        @include flex($column : row, $align-item : center, $justify-content: space-around);
+        
+        h1 {
+            font-family: 'Shrikhand';
+            font-size: 1.6em;
+            letter-spacing: 0.04em;
+        }
+
+        i {
+            font-size: 1.6em;
+            color: gray;
+        }
+    }
+}
