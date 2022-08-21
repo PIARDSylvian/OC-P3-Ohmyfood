@@ -167,6 +167,25 @@
                 }
             }
         }
+    }
 
+    @include tab {
+        @include flex($column : row, $align-item : center);
+        flex-wrap: wrap;
+        column-gap: $half-margin;
+
+        h1 {
+            width: 100%;
+        }
+
+        &>a {
+            width: calc(50% - $quarter-margin);
+        }
+    }
+
+    @include desktop {
+        &>a {
+            max-width: 700px;
+        }
     }
 }
