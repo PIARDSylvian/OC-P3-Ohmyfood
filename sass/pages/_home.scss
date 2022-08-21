@@ -83,19 +83,22 @@
         }
     }
 
-    @media screen and (min-width: 900px) {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-between;
+    @include tab {
+        @include flex($column : column, $align-item : center);
 
         h1 {
             width: 100%;
         }
 
         &__step {
-            width: 30%;
+            width: 300px;
         }
+    }
+
+    @include desktop {
+        @include flex($align-item : center);
+        flex-wrap: wrap;
+        column-gap: $margin;
     }
 }
 
