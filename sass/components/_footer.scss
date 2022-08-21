@@ -25,19 +25,10 @@ footer {
             }   
         }
 
-        @media screen and (min-width: 650px) {
-            display: flex;
+        @include tab {
+            @include flex($column : row, $justify-content : space-evenly);
             flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: space-between;
-    
-            h1 {
-                width: 100%;
-            }
-    
-            &__step {
-                width: 30%;
-            }
+            column-gap: $half-margin;
         }
     }
 }

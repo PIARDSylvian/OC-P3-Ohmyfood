@@ -7,3 +7,8 @@ $margin: 30px;
 $quarter-margin: calc($margin / 4);
 $half-margin: calc($margin / 2);
 $tree-quarter-margin: calc($margin * 0.75);
+
+$breakpoints: (
+    tab : 600px,
+    desktop : 992px
+);
