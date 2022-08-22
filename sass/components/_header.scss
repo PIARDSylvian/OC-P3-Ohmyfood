@@ -2,6 +2,7 @@
     @include box-shadow($y : 2px, $flou : 4px, $color : darken($font-quaternary, 20));
     @include flex($column : row, $align-item : center, $justify-content: center);
     padding: $tree-quarter-margin 0 $half-margin;
+    position: relative;
  
     &__logo {
         width: 160px;
