@@ -1,6 +1,4 @@
 .header {
-    background-color: $font-quaternary;
-
     a {
         color: black;
         position: absolute;
@@ -37,6 +35,24 @@
         i {
             font-size: 1.6em;
             color: gray;
+        }
+
+        @include tab {
+            justify-content: space-between;
+        }
+
+        @include desktop {
+            width: 60%;
+            margin: 0 auto;
+            position: relative;
+            top: -$padding;
+            justify-content: center;
+
+            i {
+                position: absolute;
+                right: $half-margin;
+            }
+            
         }
     }
 }
@@ -97,6 +113,11 @@
             align-self: flex-end;
             padding-right: $quarter-margin;
         }
+    }
+
+    @include desktop {
+        width: 60%;
+        margin: 0 auto;
     }
 }
 

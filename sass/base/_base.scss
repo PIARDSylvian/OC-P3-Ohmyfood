@@ -5,6 +5,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+main {
+    background-color: $font-quaternary;
+}
+
 main>section, footer {
     padding: $padding $half-margin;
 }
