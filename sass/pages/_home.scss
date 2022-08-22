@@ -36,7 +36,6 @@
 }
 
 .working {
-    padding-left: calc($margin - 5px);
     background-color: white;
 
     h1 {
@@ -48,7 +47,7 @@
         font-weight: bold;
         padding: calc($margin - 2px);
         position: relative;
-        margin-bottom: calc($half-margin + 6px);
+        margin: 0 0 calc($half-margin + 6px) $half-margin;
 
         @include flex(null, center, flex-start);
         @include menu;
