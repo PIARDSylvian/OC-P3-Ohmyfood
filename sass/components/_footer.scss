@@ -9,6 +9,10 @@ footer {
         font-size: 1.2em;
         margin: 0;
         --webkit-filter: blur(0.000001px);
+
+        @include tab {
+            text-align: center;
+        }
     }
 
     ul {
@@ -26,9 +30,14 @@ footer {
         }
 
         @include tab {
-            @include flex($column : row, $justify-content : space-evenly);
+            @include flex($justify-content : space-between);
             flex-wrap: wrap;
             column-gap: $half-margin;
+        }
+
+        @include desktop {
+            max-width: 60%;
+            margin: $tree-quarter-margin auto;
         }
     }
 }
