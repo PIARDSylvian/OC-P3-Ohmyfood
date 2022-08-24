@@ -38,6 +38,7 @@
             transition: color 250ms;
 
             &:hover {
+                cursor: pointer;
                 font-weight: bold;
                 color: $font-primary;
             }
@@ -145,11 +146,14 @@
         }
 
         &:hover {
+            cursor: pointer;
+
             >div {
                 width: calc(100% - 4em);
             }
 
             button {
+                cursor: pointer;
                 transform: translateX(-4em);
 
                 i {
@@ -157,9 +161,7 @@
                     transition: transform .7s;
                 }
             }
-        }
-
-        
+        }        
     }
 
     @include desktop {
