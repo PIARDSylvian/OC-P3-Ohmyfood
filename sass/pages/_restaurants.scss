@@ -35,6 +35,12 @@
         i {
             font-size: 1.6em;
             color: gray;
+            transition: color 250ms;
+
+            &:hover {
+                font-weight: bold;
+                color: $font-primary;
+            }
         }
 
         @include tab {
