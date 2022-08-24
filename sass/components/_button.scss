@@ -20,7 +20,7 @@ button {
         background: linear-gradient(165deg, lighten($font-secondary, 3), lighten($font-primary, 3));
         z-index: -1;
         opacity: 0;
-        transition: all 250ms;
+        transition: opacity 250ms;
     }
 
     &:hover {
