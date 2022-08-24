@@ -86,16 +86,13 @@
 
     &__menu {
         @include menu($half-margin, white);
-        @include flex($justify-content: space-between);
         margin-top: calc($half-margin - 2px);
         padding: $half-margin;
+        position: relative;
+        overflow: hidden;
 
         &:first-of-type {
             margin-top: $margin;
-        }
-
-        >div {
-            overflow: hidden;
         }
 
         h1 {
@@ -114,11 +111,55 @@
         }
 
         .menu__price {
-            margin: 0;
+            margin: 0 $quarter-margin;
             font-weight: bold;
             align-self: flex-end;
-            padding-right: $quarter-margin;
         }
+
+        &__container {
+            @include flex($justify-content: space-between);
+            width: 100%;
+            transition: width .7s;
+
+            >div {
+                overflow: hidden;
+            }
+        }
+
+        button {
+            @include flex($align-item : center);
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 100%;
+            width: 4em;
+            transition: transform .7s;
+            border: 0;
+            background-color: $font-ternary;
+            padding: 0;
+
+            i {
+                font-size: 1.6em;
+                color: white;
+            }
+        }
+
+        &:hover {
+            >div {
+                width: calc(100% - 4em);
+            }
+
+            button {
+                transform: translateX(-4em);
+
+                i {
+                    transform: rotate(360deg);
+                    transition: transform .7s;
+                }
+            }
+        }
+
+        
     }
 
     @include desktop {
