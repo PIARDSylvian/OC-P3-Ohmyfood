@@ -64,6 +64,28 @@
     }
 }
 
+@keyframes menu_item {
+    from {
+        opacity: 0;
+        margin-bottom: $margin;
+    }
+
+    to {
+        opacity: 1;
+        margin-bottom: 0;
+    } 
+}
+
+article[class*="__menu--animate--"] {
+    animation : menu_item 1500ms ease-in-out backwards;
+}
+
+@for $i from 1 through 9 {
+    article[class*="__menu--animate--#{$i}"] {
+        animation-delay: 500ms * $i;
+    }
+}
+
 .starter, .dishes, .desserts {
     background-color: $font-quaternary;
     padding: $quarter-margin $half-margin $half-margin;
