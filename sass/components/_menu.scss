@@ -1,5 +1,0 @@
-@mixin menu( $border-radius : $tree-quarter-margin, $background-color : $font-quaternary) {
-    border-radius: $border-radius;
-    background-color : $background-color;
-    @include box-shadow($color : darken($font-quaternary, 10));
-}
