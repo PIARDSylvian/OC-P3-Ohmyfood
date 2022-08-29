@@ -90,7 +90,7 @@ article[class*="__menu--animate--"] {
     background-color: $font-quaternary;
     padding: $quarter-margin $half-margin $half-margin;
 
-    > h1 {
+    > h2 {
         font-size: 1em;
         text-transform: uppercase;
         font-weight: 300;
@@ -118,7 +118,7 @@ article[class*="__menu--animate--"] {
             margin-top: $margin;
         }
 
-        h1 {
+        h2 {
             margin: 0;
             font-size: 1.1em;
         }
@@ -127,7 +127,7 @@ article[class*="__menu--animate--"] {
             margin: 0.1em 0 0;
         }
 
-        h1, p:not(.menu__price) {
+        h2, p:not(.menu__price) {
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
@@ -195,6 +195,7 @@ article[class*="__menu--animate--"] {
 .restaurant-submit {
     @include flex;
     background-color: $font-quaternary;
+    padding: $padding $half-margin;
 
     .btn {
         padding: calc($half-margin + 3px) 50px;
