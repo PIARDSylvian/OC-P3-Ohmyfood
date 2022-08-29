@@ -67,12 +67,12 @@
 @keyframes menu_item {
     from {
         opacity: 0;
-        margin-bottom: $margin;
+        transform: translateY($margin);
     }
 
     to {
         opacity: 1;
-        margin-bottom: 0;
+        transform: translateY(0);
     } 
 }
 
