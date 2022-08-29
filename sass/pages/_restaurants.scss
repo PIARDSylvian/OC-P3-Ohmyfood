@@ -35,6 +35,13 @@
         i {
             font-size: 1.6em;
             color: gray;
+            transition: color 250ms;
+
+            &:hover {
+                cursor: pointer;
+                font-weight: bold;
+                color: $font-primary;
+            }
         }
 
         @include tab {
@@ -54,6 +61,28 @@
             }
             
         }
+    }
+}
+
+@keyframes menu_item {
+    from {
+        opacity: 0;
+        transform: translateY($margin);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    } 
+}
+
+article[class*="__menu--animate--"] {
+    animation : menu_item 1500ms ease-in-out backwards;
+}
+
+@for $i from 1 through 9 {
+    article[class*="__menu--animate--#{$i}"] {
+        animation-delay: 500ms * $i;
     }
 }
 
@@ -80,16 +109,13 @@
 
     &__menu {
         @include menu($half-margin, white);
-        @include flex($justify-content: space-between);
         margin-top: calc($half-margin - 2px);
         padding: $half-margin;
+        position: relative;
+        overflow: hidden;
 
         &:first-of-type {
             margin-top: $margin;
-        }
-
-        >div {
-            overflow: hidden;
         }
 
         h1 {
@@ -108,11 +134,56 @@
         }
 
         .menu__price {
-            margin: 0;
+            margin: 0 $quarter-margin;
             font-weight: bold;
             align-self: flex-end;
-            padding-right: $quarter-margin;
         }
+
+        &__container {
+            @include flex($justify-content: space-between);
+            width: 100%;
+            transition: width .7s;
+
+            >div {
+                overflow: hidden;
+            }
+        }
+
+        button {
+            @include flex($align-item : center);
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 100%;
+            width: 4em;
+            transition: transform .7s;
+            border: 0;
+            background-color: $font-ternary;
+            padding: 0;
+
+            i {
+                font-size: 1.6em;
+                color: white;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            >div {
+                width: calc(100% - 4em);
+            }
+
+            button {
+                cursor: pointer;
+                transform: translateX(-4em);
+
+                i {
+                    transform: rotate(360deg);
+                    transition: transform .7s;
+                }
+            }
+        }        
     }
 
     @include desktop {
@@ -125,7 +196,7 @@
     @include flex;
     background-color: $font-quaternary;
 
-    button {
+    .btn {
         padding: calc($half-margin + 3px) 50px;
     }
 }

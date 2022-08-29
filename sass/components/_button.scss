@@ -1,4 +1,4 @@
-button {
+.btn {
     @include box-shadow($color : darken($font-quaternary, 20));
     background: linear-gradient(165deg, $font-secondary, $font-primary);
     padding: calc($half-margin + 3px);
@@ -6,4 +6,30 @@ button {
     border-radius: $margin;
     font-weight: 400;
     color: white;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: $margin;
+        background: linear-gradient(165deg, lighten($font-secondary, 3), lighten($font-primary, 3));
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 250ms;
+    }
+
+    &:hover {
+        @include box-shadow($color : darken($font-quaternary, 40));
+        
+        cursor: pointer;
+        &::after {
+            opacity: 1;
+        }
+    }
+        
 }

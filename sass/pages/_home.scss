@@ -30,7 +30,7 @@
         color: gray; 
     }
 
-    button {
+    .btn {
         margin-bottom: $quarter-margin;
     }
 }
@@ -160,7 +160,7 @@
             i {
                 font-size: 1.8em;
                 color: gray;
-                transition: color .5s;
+                transition: color 250ms;
 
                 &:hover {
                     font-weight: bold;
@@ -188,5 +188,57 @@
         &>a {
             max-width: 700px;
         }
+    }
+}
+
+.loader {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(4px);
+    @include flex($align-item : center);
+    animation: loader 5s forwards;
+
+    &::before, &::after {
+        content: "";
+        width: 3em;
+        height: 3em;
+        position: absolute;
+        left: 50%;
+        border-radius: 50%;
+        border: solid .4em ;
+        animation: spin 2s ease 3;
+    }
+
+    &::before {
+        border-color: transparent $font-primary;
+    }
+
+    &::after {
+        border-color: $font-secondary transparent;
+        animation-delay: 250ms;
+    }
+}
+
+@keyframes loader {
+    0% , 90% {
+        opacity: 1;
+    }
+
+    100% {
+        z-index: -1;
+        opacity: 0;
+    }
+}
+
+@keyframes spin {
+    50% {
+        transform: rotate(0) scale(1.2);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
