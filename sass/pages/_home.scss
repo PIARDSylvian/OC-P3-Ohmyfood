@@ -200,6 +200,7 @@
     backdrop-filter: blur(4px);
     @include flex($align-item : center);
     animation: loader 5s forwards;
+    border-radius: 0;
 
     &::before, &::after {
         content: "";
