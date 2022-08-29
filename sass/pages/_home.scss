@@ -15,7 +15,7 @@
     @include flex('column', 'center');
     background-color: $font-quaternary;
 
-    h1 {
+    h2 {
         width: 80%;
         font-size: 1.5em;
         margin: 0;
@@ -38,7 +38,7 @@
 .working {
     background-color: white;
 
-    h1 {
+    h2 {
         font-size: 1.5em;
         margin: 0 0 $margin;
     }
@@ -86,7 +86,7 @@
     @include tab {
         @include flex($column : column, $align-item : center);
 
-        h1 {
+        h2 {
             width: 100%;
         }
 
@@ -105,7 +105,7 @@
 .restaurants {
     background-color: $font-quaternary;
 
-    >h1 {
+    >h2 {
         font-size: 1.5em;
         margin: 0 0 $margin;
     }
@@ -148,7 +148,7 @@
             padding: $half-margin;
             @include flex(null, center, space-between);
 
-            h1 {
+            h3 {
                 font-size: 1.1em;
                 margin: 0;
             }
@@ -175,7 +175,7 @@
         flex-wrap: wrap;
         column-gap: $half-margin;
 
-        h1 {
+        h2, h3 {
             width: 100%;
         }
 
